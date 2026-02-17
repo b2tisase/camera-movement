@@ -1,0 +1,1734 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Camera Movement </title>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
+</head>
+<body>
+
+
+  <!-- ከላይ ያለው ሄዲንጉ ጥቁር ወይም ነጭ እንዲሆን ከተፈለገ ፤ ከዚህ በታች ያለውን ኮድ on/off በማድረግ መጠቀም ይቻላል -->
+
+  
+  <div class="w3-black"> 
+
+
+  <!-- ከላይ ያለው ሄዲንጉ ጥቁር ወይም ነጭ እንዲሆን ከተፈለገ ፤ ከዚህ በላይ ያለውን ኮድ on/off በማድረግ መጠቀም ይቻላል -->
+
+
+
+<!-- Text DISABLE start HERE-->
+
+<!DOCTYPE html>
+<html>
+
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Disable cut copy paste</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+</head>
+<body>
+  
+  
+<p class="code"><br>
+
+  <script type="text/javascript">
+  
+    $(document).ready(function() {
+      $('body').bind('cut copy paste', function (e) {
+        e.preventDefault();
+      })
+      $(".code").on("contextmenu", function(e) {
+        return false;
+      })
+    })
+    
+    </script>
+
+
+</body>
+</html>
+
+
+<!-- Text DISABLE end HERE-->
+
+
+
+<header class="w3-container  w3-padding" id="myHeader">
+
+<!--  <i onclick="w3_open()" class="fa fa-bars w3-xlarge w3-button w3-theme"></i> -->
+
+
+<div class="w3-row-padding w3-center w3-margin-top ">
+
+  <h1 class="w3-jumbo" class="code"> <b> Camera Movement  <br> </b> </h1>
+  
+    <h1 style="text-align:center;" class="code" > Nine Basic camera movements (7camera+2lens) Of course, <br> there are more types of moves,
+       and more complicated combinations, <br> but for now, let's focus on these basics:  </h1> <br>
+    <div class="w3-padding-32">
+      <button class="w3-btn w3-xlarge w3-blue w3-hover-light-grey"
+       onclick="document.getElementById('id01').style.display='block'" style="font-weight:900;">About Bitew Studio Lab</button>
+    </div>
+  </div>
+</header>
+
+<!-- Modal ይህ ክፍል About Bitew Studio Lab ክሊክ ሲደረግ ሌላ የሚከፈት ዊንዶ መጠቀሚያ ኮድ እዚህ ይጀምራል-->
+
+<div id="id01" class="w3-modal ">
+    <div class="w3-modal-content w3-card-4 w3-animate-top">
+      <header class="w3-container w3-yellow"> 
+        <span onclick="document.getElementById('id01').style.display='none'"
+        class="w3-button w3-display-topright">×</span>
+        <h4 class="code" style="text-align:center;" >What We Do/service... <br> </h4>
+        <h5 class="code" style="text-align:center;" >Here’s what we can do for you. <i class="fa fa-smile-o"></i>  <br> </h5>
+      </header>
+      <div class="w3-padding w3-blue">
+        <p class="code" > We like to think of ourselves as your creative partner. You bring your passion and intent; we provide our expertise and love of design. <br> </p>
+
+
+        <p>Go to our <a class="w3-btn w3-red " href="https://www.bitews.com/home">BSL WEBSITE</a> to learn more!</p>
+
+      </div>
+      <footer class="w3-container w3-white">
+        <p style="text-align:center;">BITEW STUDIO LAB</p>
+      </footer>
+    </div>
+</div>
+
+<!-- Modal ይህ ከዚህ በላይ ያለው ክፍል About Bitew Studio Lab ክሊክ ሲደረግ ሌላ የሚከፈት ዊንዶ መጠቀሚያ ኮድ  ሲሆን ከዚህ በላይ ያልቃል -->
+
+
+
+        <!-- ይህ ከዚህ በታች ያለው ኮድ በቀይ ታብ የተቀመጠው "download application" ሲሆን ክሊክ ሲደረግ ሌላ ዊንዶ የሚመጣው ከዚህ በታች ይጀምራል -->
+
+       <!--  <div class="w3-center w3-padding-32  "> -->
+
+        
+       <!--  <button class="w3-button  w3-red  w3-padding-large w3-section w3-hide-small" onclick="document.getElementById('download').style.display='block'">
+          <i class="fa fa-download"></i> Download Application </button>
+  
+        <h5>Available for <i class="fa fa-android w3-xlarge w3-text-green  "></i> <i class="fa fa-apple w3-xlarge"></i> <i class="fa fa-windows w3-xlarge w3-text-blue"></i></h5>
+  
+      </div>
+      <div class="w3-col l4 m6">
+       
+        <div class="w3-center w3-hide-large w3-hide-medium">
+
+          <button class="w3-button  w3-block w3-padding-large" onclick="document.getElementById('download').style.display='block'">
+            <i class="fa fa-download "></i> Download Application -->
+
+            
+          </button>
+         
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Modal -->
+ <!--  <div id="download" class="w3-modal w3-animate-opacity">
+    <div class="w3-modal-content" style="padding:32px">
+      <div class="w3-container w3-white">
+        <i onclick="document.getElementById('download').style.display='none'" class="fa fa-remove w3-xlarge w3-button w3-transparent w3-right w3-xlarge"></i>
+        <h2 class="w3-wide">DOWNLOAD</h2>
+        <p>Download the app in AppStore, Google Play or Microsoft Store.</p>
+        <i class="fa fa-android w3-large w3-text-green"></i> <i class="fa fa-apple w3-large w3-text-orange"></i> <i class="fa fa-windows w3-large w3-text-blue"></i>
+        <p><input class="w3-input w3-border" type="text" placeholder="Enter e-mail"></p>
+        <button type="button" class="w3-button w3-block w3-padding-large w3-red w3-margin-bottom" 
+        onclick="document.getElementById('download').style.display='none'"> Download</button> -->
+      </div>
+    </div>
+  </div>
+  
+  
+   <!-- ይህ ከዚህ በላይ ያለው ኮድ በቀይ ታብ የተቀመጠው "download application" ሲሆን ክሊክ ሲደረግ ሌላ ዊንዶ የሚመጣው ከዚህ በላይ ያልቃል -->
+
+   
+<div class="w3-row-padding w3-center w3-margin-top "> 
+
+
+     <!-- <h2 style="text-align:center;"> Camera Movement   </h2><br> -->
+
+    
+
+
+<div class="w3-half w3-padding-16 ">
+  <div class=" w3-container w3-row w3-border " style="min-height:460px ">
+  <h1 class="code" > PAN  </h1> <br>
+
+  <!-- አይከን ወይም ፎቶ ኦን እና ኦፍ አድርጎ ለመጠቀም ኮዱ እዚህ ይጀምራል -->
+
+ <!--  <i class="fa fa-desktop w3-margin-bottom w3-text-theme" style="font-size:120px"></i> -->
+ 
+
+ <img class="w3-image w3-round-large" src=" https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi22Y0boStuGWbUMmUMORne4whgPSLUUCI4XurEGLehlxR0cCBXGHipzoyjXfAtDbkS_NM2CQ9OF-DBw9KMI9czuVf8ussPpNnjDZyLIKFJmDJzTS7ThPr6WtN83X2qisv5agQNsOdGAE0xXEwgZNpWKgRR2ZxxorVpkwCCVoZA1JQsip5PmL3OrCuer2k/s1736/1.png" 
+ alt="App" width="335" height="197">
+
+
+
+  <!--  <img src=" #" style="width:50%" onclick="onClick(this)" class="w3-hover-opacity" alt="A microphone"> -->
+  
+  
+ <!-- አይከን ወይም ፎቶ ኦን እና ኦፍ አድርጎ ለመጠቀም ኮዱ ከዚህ በላይ ያልቃል -->
+
+  <p class="code" style= "text-align:left;"  >  Panning is when you move your camera horizontally; either left to right or right to left, 
+    while its base is fixated on a certain point.You are not moving the position of the camera itself, 
+    just the direction it faces. These types of shots are great for establishing a sense of location 
+    within your story. Why: To follow a subject or show the distance between two objects. Pan shots 
+    also work great for panoramic views such as a shot from a mountaintop to the valley below. Rule: 
+    Always start on a still shot, began the pan, and finish on a still shot. Practice first. Look at 
+    the scene as the pan reaches the middle portion between the beginning and end of the scene. 
+    If there is nothing worth seeing, then the pan isn't worth shooting. <br> </p>
+
+         
+
+        <!--  <p><a href=" https://www.bitews.com/shop" class="w3-button w3-black"><i class="fa fa-th"> </i> View Our Works</a></p> -->
+ 
+  </div>
+</div>
+
+<div class="w3-half w3-padding-16">
+  <div class="w3-card w3-container w3-border" style="min-height:460px">
+  <h1> TILT </h1><br>
+
+ <!--  <i class="fa fa-css3 w3-margin-bottom w3-text-theme" style="font-size:120px"></i> -->
+
+  <img class="w3-image w3-round-large" src=" https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhoND09awasOZ8hXbtLg49krXimNdwSExSzJ4wctE7BrkBbTY1a84XcXSQlyZGkzBwF9YYMGxMPebM2qEZyzs38Hii3LSTGK6_a0D1hOQJbp9rajYfpeXFAxb6dlwbV6xjeiVHj5Zt3uvtShGrI0moHKEzj7neMfbxzA0-Wt5Vsjdkovv9q3-AZ2GqSCkI/s1200/Tilt.png" 
+      alt="App" width="335" height="197">
+
+ <!--  <img src="#" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A microphone"> -->
+
+  <p class="code" style= "text-align:left;" >  Moving the camera’s lens up or down while keeping its horizontal axis constant. Nod your head up and down -
+     this is tilting. Why: Like panning, to follow a subject or to show the top and bottom of a stationary object.
+      With a tilt, you can also show how high something is. For example, a slow tilt up a Giant Sequoia tree
+       shows its grandness and enormity. <br> </p>
+
+        <!-- <p><a href=" https://www.bitews.com/shop" class="w3-button  w3-black"><i class="fa fa-th"> </i> View Our Works</a></p> -->
+  
+  </div>
+</div>
+
+
+<!-- xx -->
+
+
+<div class="w3-row-padding w3-center w3-margin-top ">
+
+  <h3 style="text-align:center;">   </h3><br>
+
+
+<div class="w3-half w3-padding-16 ">
+
+  <div class=" w3-card w3-container w3-border " style="min-height:460px">
+
+  <h1 class="code" >DOLLY  </h1><br>
+
+ <!--  <i class="fa fa-desktop w3-margin-bottom w3-text-theme" style="font-size:120px"></i> -->
+
+<img class="w3-image w3-round-large" src=" https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhgZhvLD0ox5iU32qx6nGH7BjP9aXnR92JmZpgLOeONHc6pZsg2lO1HbXEaY6We0m3fq6l7Vaw2prNEfULHQoA5J76GYwqBSW78o-AsQSNn9bXbNvj2lNODq9OJT0Eyeo_74ZBncDcrlvsdnUKMDQmfcEh8xEZS7tKOoTNHToc7hpzJODz3ugbPtaTXIv4/s1477/4.png" 
+      alt="App" width="335" height="197">
+  
+ 
+
+  <p class="code" style= "text-align:left;"  > A dolly is when you move the entire camera forwards and backwards, typically on some sort of track
+     or motorized vehicle. This type of movement can create beautiful, flowing effects when done correctly.
+      If you want to attempt a dolly, make sure your track is stable and will allow for fluid movement.
+       Why: To follow an object smoothly to get a unique perspective, usually as either point of view (POV)
+        of the character, following the character or tracking in front of the character looking back 
+        at them to show them moving through space. Not to be confused with the piece of equipment 
+        called A DOLLY, used to create camera movement in either a Dolly or Tracking shot. <br> </p>
+
+       <!--   <p><a href=" https://www.bitews.com/shop" class="w3-button w3-black"><i class="fa fa-th"> </i> View Our Works</a></p> -->
+ 
+  </div>
+</div>
+
+<div class="w3-half w3-padding-16 ">
+  <div class="w3-card w3-container w3-border" style="min-height:460px">
+  <h1 class="code" > TRUCK  </h1><br>
+
+ <!--  <i class="fa fa-css3 w3-margin-bottom w3-text-theme" style="font-size:120px"></i> -->
+
+  <img class="w3-image w3-round-large" src=" https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhVgwOWqMmk_kN4gaxRLuRZsXbXxR7wB39jgLyKX-1n6Pz9sl_QhKxtG1-TOtRUoL3aDM1wjUwAeBK3TiVPtsk9rdCoErrB00VtZ8JZrMU_FpRa9weZV1QeyipvluvJGac89Sk0g9z2SsUBrSDK80iIobrPWBsA5sHG4paun0Zy3-gw_Fy88UoJcsB-Avg/s1717/5.png " 
+      alt="App" width="710" height="394">
+
+  <p class="code" style= "text-align:left;"  > Trucking is the same as dollying, only you are moving the camera from left to right instead of in and out. 
+     Why: To show the character move through space. <br> </p>
+
+       <!--  <p><a href=" https://www.bitews.com/shop" class="w3-button w3-black"><i class="fa fa-th"> </i> View Our Works</a></p> -->
+  
+  </div>
+</div>
+
+
+
+
+
+<!-- ሁለት ኮለመን ያለው ኮድ እዚህ ይጀምራል-->
+
+
+
+<div class=" w3-container w3-padding-64 white ">
+
+ <img src=" https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhC8HtOPUkK5QBucC919XOh8NkvVZQjlISV6yj2hUjxp0DiOSIuzJESxuUCsPh29ykp3RhZLZxMZsvKigLS672l0Oax5-1YOS1te-rCgtycMbWBHjXUvo95K1UnWi5yPSGv1Dt9r__Vzyvl-QpNZpB4ejQsDFvx_4_74BZhDTIjiaZMl8RecCzGhtnvn98/s1741/7.png"
+  style="width:50%" onclick="onClick(this)" class="w3-hover-opacity" alt=" # "> 
+
+  <div class="w3-center" >
+    <h2 class="code" > PEDESTAL  <br> </h2>
+  
+
+
+<div class="w3-container w3-light-white" style="padding:32px 32px"> 
+<!-- <h3 class="code" > PEDESTAL <br> </h3> -->
+
+<p class="code" style= "text-align:left;"  > Pedestal is primarily used in studio work, where the camera mount can be pulled up or 
+  pushed down to adjust the height of camera while shooting. Crane or Boom refers to using either 
+  a boom (pictured above) or a large crane. This works and looks similar to a construction crane. 
+  It is used for high sweeping shots or to follow the action of your subject. <br> </p>
+
+<p class="code" style= "text-align:left;"  > Why: Gives a bird's eye view. It looks as if the camera is swooping down from above. 
+  Movie directors use this for street scenes so they can shoot from above the crowd and the traffic, 
+  and then move down to eye level.  <a href=" https://www.youtube.com/watch?v=Rpk1zQ3TlI0"
+   target="_blank" class="w3-hover-text-green"> One very good crane shot (Links to an external site.)</a>
+  <br> </p>
+
+  </div>
+
+  
+  
+
+<!-- ሁለት ኮለመን ያለው ኮድ ከዚህ በላይ ያልቃል -->
+
+
+
+
+
+  <div class="w3-row-padding">
+    <div class="w3-col m6">
+      <h3 style="text-align:left" class="code" > STABILIZED  <br> </h3>
+      <p style="text-align: left" class="code" > A Stabilized shot uses more mobile means to reduce a shaky handheld look. 
+         Image above is a professional Steadycam, but this term can also describe many forms of image stabilization from sliders
+          and gimbals to drones. Why: To follow an object through twists and turns. Although the dolly is great,
+           its movements are limited. With the stabilizer,  <a href=" https://www.youtube.com/watch?v=OJEEVtqXdK8"
+           target="_blank" class="w3-hover-text-green"> You can follow someone through hallways, doors and around rooms.</a> <br> </p>
+           
+      <p style="text-align:left" <a href=" https://www.youtube.com/watch?v=OJEEVtqXdK8"
+           target="_blank" class="w3-hover-text-green"> The Long Take: Goodfellas</a> <br> </p>
+
+       
+
+         <p style="text-align: left" class="code" >  We can take your idea, specifications and images and produce a slick,
+           full color print-ready ad to be used in a magazine or newspaper.  <br> </p>
+
+
+
+    <!--   <p><a href=" https://www.bitews.com/shop" class="w3-button w3-black"><i class="fa fa-th"> </i> View Our Works</a></p>  -->
+
+
+
+    </div>
+    <div class="w3-col m6">
+      <img class="w3-image w3-round-large" src=" https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjcbDPsY8fU2K0Op39j9oi2WDEPbsgEaAXhxfw6M2t841r3MZQNN6YYw7dGqAjPRFO6B7uo3XN9vZi4feTE5pri6194FeSxYlHYqKDHYN9kMwcvvPdby1araQSUZaz-MuFiqSt9X6mHCm_ew1iO-r7ygTtjIeUP6LHNYfXTgLEK2vVrZzYt5eMZZkB8c4k/s1524/8.png" 
+      alt="Buildings" width="700" height="394">
+    </div>
+  </div>
+</div>
+
+<!-- Clarity Section -->
+
+
+  <div class="w3-row-padding">
+    <div class="w3-col l4 m6">
+      <img class="w3-image w3-round-large w3-hide-small w3-grayscale" src=" https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhC8HtOPUkK5QBucC919XOh8NkvVZQjlISV6yj2hUjxp0DiOSIuzJESxuUCsPh29ykp3RhZLZxMZsvKigLS672l0Oax5-1YOS1te-rCgtycMbWBHjXUvo95K1UnWi5yPSGv1Dt9r__Vzyvl-QpNZpB4ejQsDFvx_4_74BZhDTIjiaZMl8RecCzGhtnvn98/s1741/7.png" 
+      alt="App" width="335" height="471">
+    </div>
+    <div class="w3-col l8 m6">
+
+     <!-- <h1 class="w3-jumbo" > <b> Clarity </b> </h1> -->
+
+      <h3 class="w3-xxxlarge w3-text-red " class="code" style= "text-align:left;" > <b>HANDHELD - "Shaky Cam" <br> </b> </h3>
+      <p style= "text-align:left;"  > <span class="w3-xlarge" class="code" style= > This does not simply mean the camera was handheld. </span> Rather, 
+        it means the shot looks obviously handheld. <br>  </p>
+
+
+      <p style="text-align: left" class="code" >  Why: To introduce a feeling of unease, excitement and uncertainty. Sometimes, 
+        it is used in TV shows and movies. Notice that in horror or action movies they often use hand held shots when something 
+        bad is about to happen and the intention is that the viewers feel "unstable". 
+        <br> </p>
+
+        <p style="text-align: left" class="code" > "Handheld" is also used as a production note regarding how a shot will be captured, 
+          and not to describe the look of a shot. Due to the spontaneity of the action, many news and documentaries use hand-held shooting techniques. 
+          Professional broadcast cameras are large and rest on the user's shoulders. This balances the camera and keeps shaking to a minimum, 
+          their goal is to emulate a very stable shot. Because of their size, most consumer cameras can't rest on your shoulder,
+           so you'll need a few tips to shoot steady well-executed handheld shots. Similar to a Stabilized shot, but lacking smoothness.<br> </p>
+
+
+          <p style="text-align: left" class="code" >  Tip: When shooting handheld, do not zoom in!, keep it wide. The more you zoom in, 
+            the more pronounced the shaking appears. It is better to move closer to your subject and shoot with as wide of a setting as you can.
+             Handheld is best when you are shooting someone or something that is moving. It looks very bad when shooting landscapes,
+              buildings, or stationary objects.<br> </p>
+
+
+
+       <!-- <p> <a href=" https://www.bitews.com/shop" class="w3-button w3-black"><i class="fa fa-th"> </i> View Our Works</a></p> -->
+   
+
+   
+   
+  </div>
+  </div>
+</div>
+
+
+
+
+
+<!-- ሁለት ኮለመን ያለው ኮድ እዚህ ይጀምራል-->
+
+
+<div class=" w3-container ">
+
+ <img src=" https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjrT46hF1X1VV5V4hFErxDD5AIrK8D4Tw7Mx3b4ayrENRqxwp-TesojiQX-GYqlgbmkAKPqYiaRX_rJCtAXmi482HjmyoDl0SeNjf1yjfYnWINNPHv91bG-TNvG_YVDY0zX17SQwc22_4k4Uad_240PfcF1mpyJNTuXfc3_Zpw1WE84aqTqTB3ZhMQuAvo/s1711/10.png"
+  style="width:50%" onclick="onClick(this)" class="w3-hover-opacity" alt=" # "> 
+
+
+
+  <div class="w3-container w3-light-white" style="padding:64px 32px"> 
+  <div class="w3-center" >
+    <h2 class="code" > ZOOM <br> </h2>
+  
+<!-- <h3 class="code" > ZOOM <br> </h3> -->
+
+<p class="code" style= "text-align:left;"  > Changing the focal length of the camera, usually from wide-angle to tele-photo or vice-versa. 
+  You use the telephoto lens when you zoom in, bringing objects closer to you. There is less 
+  visible area around your subject, and distant objects are compressed. Zooming the lens
+   out gives you the wide-angle shot and more of your subject and surrounding areas are visible.
+    Depth perception is also changed, and the size and distance between objects is more pronounced. 
+  Why: To bring objects at a distance closer to the lens, or to show size and perspective. <br>  </p>
+
+<p class="code" style= "text-align:left;" > Rule: Continuous zooming in and out is annoying to viewers. Don't zoom while shooting unless
+   the scene calls for it. Use a tripod if you zoom. Start on <br> a still shot, then zoom smoothly, 
+   and end your zoom on a still shot. Practice first. Look at the scene as the zoom reaches
+    the middle portion between the closeup and wide angle. If there is nothing worth seeing,
+     than the zoom isn't worth shooting. </p>
+
+  </div>
+
+  
+  
+
+<!-- ሁለት ኮለመን ያለው ኮድ ከዚህ በላይ ያልቃል -->
+
+
+
+
+
+
+<!-- ሁለት ኮለመን ያለው ኮድ እዚህ ይጀምራል-->
+
+
+
+ <img src=" https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgJs_jcauBjl5_7p01lUKb24HP1JTF-w-ei5hb4pz2WcpRHcI59nHp42RoUyQAiYiFL6o7hKe7_s-R1MVkT8lSd7SNM5UjuckwSvAbr4nBwuygg1MFvrk1b_LhhcGwsBanWODsjfdGmH-1NkGL1QeNY4c_PbteNqsgtPkX6O2IxcG_7ekJi2dHPALfw3Xo/s1103/9.png"
+  style="width:50%" onclick="onClick(this)" class="w3-hover-opacity" alt=" # "> 
+
+  <div class="w3-center" >
+    <h2 class="code" > RACK FOCUS  <br> </h2>
+  
+<!-- <h3 class="code" > RACK FOCUS <br> </h3> --> 
+
+<p class="code" style= "text-align:left;"  > Focus on one object, like an actor's face, and have everything behind him out of focus. 
+  Then adjust the focus so his face becomes blurred and the actress behind him becomes clear. 
+  In this movement, you are changing the focal length so that one subject will go out of 
+  focus while the other comes into focus. The two subjects must be at a correct distance 
+  from each other and from the camera for this shot to work. Why: You are actually making 
+  a transition similar to an edit by constructing two distinct shots. You often see the 
+  rack focus in dramas and soap operas, changing focus from one actor's face to another 
+  during their conversation or tense moments. TIP: Use a tripod and practice before shooting. 
+  A rack focus looks bad if the camera is shaky.<br> </p>
+
+  
+
+
+   <p  style= "text-align:left;" <a href=" https://www.youtube.com/watch?v=Z_xItw7Q4No"
+    target="_blank" class="w3-hover-text-green"> Casino Royale Rack Focus  </a> <br> </p>
+
+
+
+   <p  style= "text-align:left;" <a href=" https://www.youtube.com/watch?v=Z_xItw7Q4No&feature=emb_title"
+    target="_blank" class="w3-hover-text-green"> Watch this video</a> <br> </p>
+
+  
+
+   <p  style= "text-align:left;" <a href=" https://www.youtube.com/watch?v=45e1XuA-oLY&feature=youtu.be"
+    target="_blank" class="w3-hover-text-green"> WATCH THIS VIDEO</a> <br> </p>
+
+
+
+
+
+
+  </div>
+
+  
+  
+
+<!-- ሁለት ኮለመን ያለው ኮድ ከዚህ በላይ ያልቃል -->
+
+
+
+
+<!-- ሁለት ኮለመን ያለው ኮድ እዚህ ይጀምራል-->
+
+
+ <img src=" https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiEaT2R1NSUOMIiBJgzYJvN6yCOZ1smlvNW-Nj7mxLbkuUCViqlZSmbHMAUSR7RvZULTGP7KQ170LbIyKyU9_OdpFl5nU365M9rmPw9YbTY3Pn8ZcuBwGXWkM3xH4nXKByOW8SMp168NP0iQ8pXkNXKvYwhRIzPs75fRttNSUMW5_rYZeMBKroVcubSTr4/s1673/11.png"
+  style="width:50%" onclick="onClick(this)" class="w3-hover-opacity" alt=" # "> 
+
+
+  <div class="w3-center" >
+    <h2 class="code" > CAMERA SHOTS <br> </h2>
+  
+<!-- <h3 class="code" > CAMERA SHOTS <br> </h3> -->
+
+<p class="code" style= "text-align:left;"  > Description of shot composition has very specific meanings. Let's concentrate 
+  on understanding these basic shot types used throughout the industry. 
+  It is important that everyone on a crew has the same knowledge of 
+  these terms to minimize confusion. Many are self-explanatory 
+  and they all share some basic shorthand. <br> </p>
+
+<h2 class="code" > Let’s start with a group specifically based on subjects size in the frame: <br> </h2>
+
+
+<p class="code" style= "text-align:left;" > Extreme Long/Wide Shot (ELS): A panoramic view of an exterior location photographed
+   from a considerable distance, often as far as a quarter-mile away. May also serve 
+   as the establishing shot, but not all establishing shots are Extreme Wide Shots. 
+   The subject or characters are very much to the background of the shot. 
+   Surroundings now have as much if not more importance, especially if the shot 
+   is in high-angle. A first way to consider these shots is to say that a shot
+   lends itself to a greater or lesser readability dependent on its type or length.
+    As the camera moves further away from the main subject (whether person or object)
+     the visual field lends itself to an increasingly more complex reading - in terms
+     of the relationship between the main subject and the décor there is more for
+      the spectator's eye to read or decode. This means that the closer up the shot,
+       the more the spectator's eye is directed by the camera to the specified reading. <br> </p>
+
+
+  </div>
+
+  
+    
+      <h2 class="code" > Camera Distance <br> </h2> 
+
+    <p class="code" style= "text-align:left;"  > Long/Wide Shot (LS): Subject or characters are at some distance from the camera; they 
+      are seen in full within their surrounding environment. While the term Wide Shot can be used here,
+       "Wide" technically refers to the angle of view.  A wide angle lens being used to show a large field of view. 
+       A Long Shot may be shot with a telephoto lens at a great distance as in this example from Braveheart. 
+       (This also applies to the ELS). <br> </p>
+
+
+       <img src=" https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjMQG3tXaGaKhg6s9hV5uOtOSGZYwmniQgB6Ywm0oTkF9JWNnX08krUTH9KLroE1ln1C51FwBVGfJciDuuJIM9h3bPgjbw4b1ZgyIY12t_T4T4H30MezCDW4NODy-9bd_P9l7Ha31I0PvXGHMDRJo1KhOY50_CJ7F3KnFU4xrC0_IARtdwcebEEqHxJGBY/s1396/12.png " alt="Sandwich" style="width:100%">
+       
+
+
+      
+      </div>
+
+
+
+
+
+
+
+
+  
+
+<!-- ሁለት ኮለመን ያለው ኮድ ከዚህ በላይ ያልቃል -->
+
+
+
+
+
+
+
+
+<!--  ከዚህ በታች ያለው ኮድ ከፎልደር H የመጣው ከዚህ ይጀምራል --> 
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
+.w3-bar-block .w3-bar-item {padding:20px}
+</style>
+</head>
+<body>
+
+<!-- Sidebar (hidden by default) -->
+<!-- Text DISABLE start HERE-->
+
+<!DOCTYPE html>
+<html>
+
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Disable cut copy paste</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+</head>
+<body>
+  
+  
+<p class="code"><br>
+
+  <script type="text/javascript">
+  
+    $(document).ready(function() {
+      $('body').bind('cut copy paste', function (e) {
+        e.preventDefault();
+      })
+      $(".code").on("contextmenu", function(e) {
+        return false;
+      })
+    })
+    
+    </script>
+
+
+</body>
+</html>
+
+
+<!-- Text DISABLE end HERE-->
+
+
+
+
+
+<!-- !PAGE CONTENT! -->
+
+
+  
+
+  <!-- First Photo Grid-->
+  <div class="w3-row-padding w3-padding-16 w3-center" id="food">
+    <div class="w3-quarter">
+      <img src="  https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh1RKFtIKi7zxnG-CP3-I5x0qhHo5U_FhiZcJ4nau_ZF0lN3APdfr7frKBx-DJPF1oZ_7ImoCnYd5NSliQcUhvXXJOb91ji5wjjKdtEq5gNBSKToWuCYL3SraRCIgkis8iOB3Ycav5ZQDbcpsqlqbZWjN-Ak_fhlHi1mLWs8NZj8cIMmHVdJGFdbYw2XbI/s1200/1.PNG" alt="Sandwich" style="width:100%">
+      
+      <p style="text-align:justify;" class="code" > Full shot: Shows figure in entirely with minimal space above or below  <br> </p>
+    </div>
+    <div class="w3-quarter">
+      <img src=" https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj3ggOLLOZgqUnHXEbs6VZV61K56ks9-4hnIlcGZ_t6gMFwEc1XA3zSy0_p7QW60Bem-1SXeRNS1LaMoLgQJBEg33JUBqFvne3iaP4QVu6dNVTvgS19w1QxCncQTn0C33JPqnPHkFFntrxNzF_CuZnOlSBvWh05MJvy34p_v0pPdkNxs43E_EPnfSBUPv0/s1200/2.PNG " alt="Steak" style="width:100%">
+     
+      <p style="text-align:justify;"  class="code"> Medium Long Shot: Generally speaking, this shot frames a character from the waist, hips or knees up (or down). The camera is sufficiently distanced 
+        from the body for the character to be seen in relation to her or his surroundings (in an apartment, for example). <br>  </p>
+
+        <p style="text-align:justify;" class="code" > Typically, characters will occupy half to two-thirds of the frame. This shot is very commonly used in indoor sequences 
+          allowing for a visual signification of relationships between characters. Compare a two-shot MS and a series of separate 
+          one-shots in MS of two people. The former suggests intimacy, the latter distance. The former shot could change 
+          in meaning to one of distance, however, if the two characters were separated by an object (a pillar, table or 
+          telephone, for example). Visually this shot is more complex, more open in terms of its readability than the 
+          preceding ones. The characters can be observed in relation to different planes,
+          background middle ground and foreground, and it is the inter-relatedness of these planes which also serves to produce a meaning. <br>  </p>
+
+    </div>
+    <div class="w3-quarter">
+      <img src="  https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjO63x2-esXk29BxbQQ-CjNYKE6Jd4bBxqYFFv4Bh7OodNSEGQzej2sGKJ2raGT9fP6Ghym6CRgh51Kro9jT3zWSuywUj2fg20UorZ8XIMZHohnVi4gffE2F_66etX6Y_UJ_VrtSJ-eMmwT93nI47LhOsWbs-EHR-5ZCM7B7V8IDfJxrKIrumFLELksOck/s1200/3.PNG " alt="Cherries" style="width:100%">
+ 
+
+
+      <p tyle= "text-align:left;" class="code"> Medium/Mid Shot (MS): (Links to an external site.)  <a href=" https://www.premiumbeat.com/blog/how-to-frame-a-medium-shot-like-a-master-cinematographer/" 
+        title="BSL.LOGO" target="_blank" class="w3-hover-text-green">Watch this video</a> <br> </p>
+
+
+
+
+
+      <p tyle= "text-align:left;" class="code"> Shows the figure from the waist or stomach up. The Medium 
+        shot is often the "Bread & Butter" of many Videographers. It creates a sense of intimacy without being uncomfortably close.
+       The Medium Shot is so ubiquitous to Hollywood style be sure to check out  
+        <a href=" https://www.premiumbeat.com/blog/how-to-frame-a-medium-shot-like-a-master-cinematographer/" 
+        title="BSL.LOGO" target="_blank"
+        class="w3-hover-text-green"> this Article on How To Frame a Medium Shot</a> <br> </p>
+
+
+         
+     
+    </div>
+
+
+
+    <div class="w3-quarter">
+
+
+      <img src=" https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEigwJ-o-O2ytKRZqmM22DK0VD4FiwYIb7AcuFFmc8WLeZcjMwqz21BJRbBNdVNyEVTcCgnwJ3x_9x2SuxksTJURlWIM_AKyf3zKHBomlI1UaN1RxVdxd0Kizku9x1yUaBUyz6sL4riBowCeDJN9D1Z7goJFL5-vd5Fo7t5EBex5-IOWE7_d8ZBvd_UbDMc/s1200/4.PNG" alt="Pasta and Wine" style="width:100%">
+      
+      <p style= "text-align:left;" class="code" > Medium Close-up (MCU): Close-up of one or two (sometimes three) characters, 
+        generally framing the shoulders or chest and the head. The term can also be used when the camera frames the character(s)
+        from the waist up (or down), provided the character is right to the forefront and fills the frame, (otherwise this type 
+        of of shot is a medium shot). An MCU of two or three characters can indicate : <br> </p>
+
+        <li   li class="code" style= "text-align:left;" ul class="a" li>   a coming together <br> </li>
+
+        <li   li class="code" style= "text-align:left;" ul class="a" li>   an intimacy  <br> </li>
+
+        <li   li class="code" style= "text-align:left;" ul class="a" li>   a certain solidarity.  <br> </li>
+
+         
+        <p style= "text-align:left;" class="code" > </p> Conversely, if there is a series of two and one shots, 
+        these MCUs would suggest a complicity between two people against a third who is visually separate in another shot. <br> </p>
+    </div>
+  </div>
+
+
+  
+  <!-- Second Photo Grid-->
+  <div class="w3-row-padding w3-padding-16 w3-center">
+    <div class="w3-quarter">
+
+      <img src=" https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhxLLQuhtg4u_p5siTOIcS3YmdzCMKoGPAG8J7DgO-BJoFK1WHAYmPwVMN2_aN9z1I-a7_fwxDu17OEsjsgRYZYuAZS2j5VkWSPS68QM2kWY20ttuiIfL5YTmgUp3N-y2sBnnptT3JNqETDHeaQe9BGbej3NgxofW70MAD_Dfzj50UYhARKqZDKyfPgXis/s1473/17.png" alt="Salmon" style="width:100%">
+      
+
+      <img src=" https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhG37cy8o-NfIx_JhQ9VMoFggwajb2qwQdxuYyT7l2ZzoMSBQa0m7kQQWmZueNSDTwDCNaM-Qaqj5fJz6YLhyeTaN6KPq5a8U7hMI02xcnNtRl6nSapOukRc58uLl17M_nE3tUnHJJ2iFAgraQuD1aKspk0Ujy1B4NokisBsj3SFQKIKvwgp5-REu-puxc/s1265/18.png" alt="Sandwich" style="width:100%">
+
+      <p style= "text-align:left;" class="code" > Close-up (CU): Shows head (and often a bit shoulders); reveals emotion. It should be of the entire head. 
+        When using the term Close-up for shooting something other than a face, think of framing something about the size of a human head. 
+        ICONIC EXAMPLE: Opening scene of Alex DeLarge (Malcom McDowell) in A Clockwork Orange (1971). <br> </p>
+    </div>
+    <div class="w3-quarter">
+
+
+
+
+      <img src=" https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi36ieHOEdVthmOWqIjV-HiqPvX3zVhhVDCe1ZKv4LffNEl6nCEFDefjlcYhsHbwljr4k4Li5kq8E-vlSc7-GmkqhUdjfl-4q5MIfqKtXn-2RPo42bqeKcVwc7Og3Zv6hWUR_mC_OzqIfge_-kkt9UagDxvUpNC4nDkB1tfuEm4cfLgH9Tr2OLi6oWyJZA/s1494/20.png" alt="Croissant" style="width:100%">
+
+
+
+      <img src=" https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgmlhcIFNdYjk5qu00Dccv5uZOTt8Zc2JIWbMfJfLYys6WC78SnYoWGmilTdy-ZdkhKzV2F4o9B-jrgEuRV8kVvaP-oBvR4NaFLyE-wMBul-o3bE-ZiNXnwVXxhmLvNjLdguW9Rszhyphenhyphen2m8zhaU2uB14ZbigmS8RrsQCBfoXc3BzdT8eK0fE3_GXkNrUAqs/s1377/21.png " alt="Me" class="w3-image" style="display:block;margin:auto" width="800" height="533">
+     
+     
+      
+      <p style= "text-align:left;" class="code" > Extreme Close-up (ECU): Often just eyes, or lips, or a small object filling the frame to give it meaning (i.e.: watch close enough to read the time, etc). ICONIC EXAMPLE: Charles Foster Kane’s 
+        (Orson Welles) mouth as he utters the famous word “Rosebud” in Citizen Kane (1941). <br> </p>
+    </div>
+
+    <div class="w3-quarter">
+
+
+      
+      <img src=" https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh6wCiZEsaTpFbtX_r4tHygB7bvU2yOtOTzlyK7xBH_nwjpqbbjUosmdLSIeMir9e1PWA8HEKYX2MdELIygOsEdrReW58ErcQuO1GKugrIOIV6gvOb1M3FInU4R3zuLIi3ziBlwBw994Iot-K_0o8bw7x9ljEPkHn-mJX-fgQEmdMZ957y5xeGbZI-KYkU/s1456/22.png" 
+      alt="Me" class="w3-image" style="display:block;margin:auto" width="800" height="533">
+
+  
+
+    
+
+      <p style= "text-align:left;" class="code"> The rest of these shot types are more about composition,
+        and less to do with specific subject size in the frame. Two Shot (also Three-shot etc.): Shows two people in medium-long shot to show conversations.
+         ICONIC EXAMPLE: Jules Winnfield (Samuel L. Jackson) and Vincent Vega (John Travolta)
+          shooting Marvin in Pulp Fiction (1994). Yep, a two-shot of two shots.
+         NOTE: If you need to specify that the shot is of only one person, the term used is Single. <br> </p>
+
+    </div>
+
+    <div class="w3-quarter">
+
+
+
+
+      <img src=" https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjD31NEgTY-bXghxiPr8ga4ukbl_dWcT0T9zzoZQkvc3oJsHYz6XPrgHF2q2qLCTvYQ8RSNURlPha2bwWs14-UFFf2BxsCpjxOBhf29Lk0odAK-1_nc_IBs-OMKXfPF2AOBS0MFIGHqw0i0Pa1qD7Frf-ba5mT8-y2uBxdLjKmWN0gTw-ie3wM46MkHroc/s1465/23.png" 
+      alt="Me" class="w3-image" style="display:block;margin:auto" width="800" height="533">
+
+
+
+
+      <img src=" https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgzcaNZimorcQHgfXt6jax8bc8kW9-xWv9bIJyvrL1TS7FxzjyiQEXwDE4C_KyVslEn843sJePKpWfobk0Jiv16qclirOaxuI-zRhQTwfYPbY_KoNdYGuZyp6oNbGse3ypNPOcR75xp27ZomRpVK6dqU6v5pEWuJUTLpQ2RRMlnVD59mrKRmAwRImWSQ8E/s1526/28.png" alt="Pasta and Wine" style="width:100%">
+    
+
+     
+    
+
+
+
+
+
+
+
+ <p style= "text-align:left;" class="code" > Establishing Shot: It’s in the name – this shot is at the head of the scene and establishes the 
+ location the action is set on, whilst also setting the tone of the scene(s) to come. It usually follows directly after an
+aerial shot in the opening of films and is beloved by TV directors. ICONIC EXAMPLE: The infamous New York City diner 
+– Tom’s Restaurant in Seinfeld (1989-1998).  <br> </p>
+
+    </div>
+  </div>
+
+  <!-- Pagination -->
+
+
+ 
+
+ <!-- 2 START HERE -->
+
+   
+    <hr id="what">
+  
+    <!-- About Section -->
+    <div class="w3-container w3-padding-16 w3-center">  
+      <h2>  Master Shot</h2><br>
+
+
+  
+      <img src="  https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjunn8x_hlO7aMwedF6j57eX77F8ljV8MPYK3j5bX589HT-PKZLnESrdCsWMVDubf4KqVduCW995Tr28KbRKocJ9qOfQtcduTcYvr96L9vpDuGQJb96k22aRW42jT7_PTSSj48ZoBC7OoRgUFPyvGv6CFlM_pX9ZcQFz2fiudBju7-k-YHz_FmT6Gr0ndM/s1526/25.png" alt="Sandwich" style="width:100%">
+
+
+
+
+     
+      <div class="w3-padding-32">
+       
+  <p style= "text-align:left;" class="code" > Master Shot: A long take of an entire scene, generally a relatively long shot that facilitates the assembly
+     of component closer shots and details. The editor can always fall back on the master shot: consequently,
+      it is also called a cover shot. ICONIC EXAMPLE: When Travis Bickle joins his fellow taxi drivers in the diner. Taxi Driver (1976). <br>  </p>
+      </div>
+    </div>
+    <hr>
+
+<!-- 2 END HERE -->
+
+
+ <!-- 3 START HERE -->
+
+
+
+ 
+   
+  <hr id="where">
+
+  <!-- About Section -->
+
+
+  <div class="w3-container w3-padding-16 w3-center">  
+
+    
+    <h2> Over the Shoulder </h2><br>
+
+
+
+    <img src=" https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhrPKR9aGdPNhT1HtjRcn-b2MfOONhTinLGOaO7rjtQXT2QqGJX1oGaYqTZzKlui1PK9j4yyQxSdordn7yVxuELq7O83muxEaK7lzvJy5HFjiXzNEZRDaP2og-2E56xCjRVNSfyY0qQxT3uqL9i-H6AQj3RoSV2xKd6cKbgi0dNcwFqniRJ6DKN06KMv2I/s1510/26.png" alt="Steak" style="width:100%">
+      
+    
+   
+    
+    <div class="w3-padding-32">
+     
+<p style= "text-align:left;" class="code" >  Over the Shoulder: This is where the camera is positioned 
+  behind a subject’s shoulder and is usually used for filming conversations between two actors. 
+  The framing includes a little, or a lot, of one subjects shoulder, and a medium shot (or medium close-up) 
+  of subject facing camera. This popular method helps the audience to be drawn into the conversation and helps 
+  to focus-in on one speaker at a time. Seeing as the non-speaking actor is seen only from behind, 
+  it’s common for major production sets to substitute actors with stand-ins or doubles for these shots. <br> </p>
+    </div>
+  </div>
+  <hr>
+
+
+ <!-- 3 END HERE -->
+
+
+
+
+
+  <!-- 4 START HERE -->
+
+
+
+  <div class="w3-center w3-padding-8">
+   
+    <hr id="how">
+  
+    <!-- About Section -->
+    <div class="w3-container w3-padding-8 w3-center">  
+      <h2>  Example from The Dark Knight ICONIC EXAMPLE</h2><br>
+
+
+
+
+      <img src=" https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhQwgvD7IEWbT2JxciECtkfEZvlrqMhMHSyZUmngSZ7cKWKBYKpuD_8y4uv6uYDTdc7mBFa09pl4u6PYTtxGcsIyMQXE-UMr1GPW3iPrKaGTubFWxIXElI4lAgbd8Ao96zzDPh8NkHtQw2-LtawitbBE6ikrje__CLHNRtL_fxWzRIYb-2TrFrNzTYpfFg/s1697/35.png" 
+      class="w3-round w3-image w3-opacity-min" alt="Table Setting" width="600" height="750">
+
+
+
+
+      <img src=" https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEilQ_TUPXdbClBb6Tkw9PruYY2vKOCeGNM1IqlfZhyirm9jq6WwXOHTu1GMK3CtbOReMA_M_M2rTt7Wsg2tqrXukd68PGHJN6XAHIpqswnaDULAYcwkF5PxzgvfjzHefqvOpnhMY1aBCGmOXO77tgys0Fhr5qPk_ssg5laU2vHBB44Nc_Bd4kn07aAmzYI/s1684/36.png" 
+      class="w3-round w3-image w3-opacity-min" alt="Menu" style="width:100%">
+      
+      <div class="w3-padding-32">
+
+
+
+       
+        <p style= "text-align:left;" class="code" > Example from The Dark Knight
+          ICONIC EXAMPLE: Robert DeNiro and Al Pachino, adversaries meet in a restaurant in Heat (1995).
+           Notice how the framing grows closer and closer as the scene grows in intensity.  
+           The over-the-shoulder shot starts with medium shots, and near end they are both framed in a very tight close-up.
+              <a href=" https://www.youtube.com/watch?time_continue=439&v=mZjraQagtTo" target="_blank"> The Famous Restaurant Scene from Heat(1995). . .
+                Al Pacino vs Robert Deniro
+              </a>  <br> </p>
+      
+
+              <p style= "text-align:left;" class="code">  Low Angle: Camera is below the subject, looking up. Makes characters appear larger,
+                more imposing, threatening. ICONIC EXAMPLE: Basically every time a superhero 
+                (and villain) first appears in costume in every superhero film. But another noteworthy one 
+               I can’t pass up is the shot of Aldo Raine (Brad Pitt) 
+               and Smithson Utivich (B J Novak)  in Inglourious Basterds (2009). <br> </p>
+
+      </div>
+    </div>
+    <hr>
+
+
+ <!-- 4 END HERE -->
+
+
+
+<!-- 4 ሮው ያለው የሁለተኛው ዙር አንደኛው መስመር እዚህ ይጀምራል -->
+
+
+
+ <!-- First Photo Grid-->
+ <div class="w3-row-padding w3-padding-16 w3-center" id="food">
+  <div class="w3-quarter">
+
+
+   
+
+
+<!-- ከ  ዚ  ህ  በ ላ ይ 4 ፎ ቶ ገ ብ ቷ ል -->
+
+    
+    <p style= "text-align:left;" class="code"  > High Angle: In contrast with the low angle shot, this one films from a higher point 
+      and looks down on the character or subject, often isolating them in the frame. <br> </p>
+  </div>
+  <div class="w3-quarter">
+
+    <img src=" https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgzcaNZimorcQHgfXt6jax8bc8kW9-xWv9bIJyvrL1TS7FxzjyiQEXwDE4C_KyVslEn843sJePKpWfobk0Jiv16qclirOaxuI-zRhQTwfYPbY_KoNdYGuZyp6oNbGse3ypNPOcR75xp27ZomRpVK6dqU6v5pEWuJUTLpQ2RRMlnVD59mrKRmAwRImWSQ8E/s1526/28.png" alt="Pasta and Wine" style="width:100%">
+    
+
+   
+    <p style= "text-align:left;" class="code" >  
+      Basically the direct opposite of the low angle, it aims to portray the subject
+       as submissive, inferior or weak in some way. 
+        ICONIC EXAMPLE: Matilda walking up to the librarian for the first time in Matilda (1996).<br>  </p>
+
+     
+
+  </div>
+  <div class="w3-quarter">
+
+
+
+    <img src=" https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjA2X9ApdL1klbNoBV8vxNcXOUBZzWzqUwZ8F7O-Z5C3M-_96DWmLZjJTns9LQ3lmyHnTeUpxac4-4bBMHtMsUCOoCTCyIKQu_j95D9S-gXiCqYxRqrZVEt9pyPCN5DS4SQ0P4SgHPALo_j7QyupMiJfKUMwIV5fUR96OjB5SieMXYl_AAVeu_Qk_UQlYs/s1517/29.png" alt="Popsicle" style="width:100%">
+
+    <p style= "text-align:left;" class="code" > Dutch Angle: A shot made with the camera leaned to one side and filming at a diagonal 
+      angle (the horizon is not parallel with the bottom of the frame). Often used 
+      to portray disorientation or confusion. ICONIC EXAMPLE: Bruce Willis in 12 Monkeys. <br>  </p>
+
+   
+  </div>
+  <div class="w3-quarter">
+
+    <img src=" https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgq8AV_AUsapYZvMdE8cESZjmuqadOhkUmn_zdNRbGb5BDMai2uw9xfZ7-GpWyj8GDfNeJWFDwttHLE19oi1b1nfGg4GgI4dJNvEjFGia_Y7SwN3f9Oy7A0nLs-u10tPxzU1uZH8o1gdEflChW3DMFdY_3iY_4-r9Z5dQJGD4d1C4QJGmMJPZ3WKAwH894/s1472/30.png" alt="Salmon" style="width:100%">
+
+    <p style= "text-align:left;" class="code" > Overhead:  Camera is at an extreme high angle. Shows an overall view of the situation. 
+      Often done with a drone, helicopter or balcony ledge looking straight down. Can portray
+       character in there surrounding providing a dis-embodied view, or conversely, 
+       a point of view of someone watching.  ICONIC EXAMPLE:
+        Thor and Captain America look up to ponder their enemy. The Avengers (2012).<br>  </p>
+  </div>
+</div>
+
+
+
+
+
+<!-- 4 ሮው ያለው የሁለተኛው ዙር አንደኛው መስመር ከዚህ በላይ ያልቃል -->
+
+
+
+
+<!-- 4 ሮው ያለው የሁለተኛው ዙር ሁለተኛው መስመር እዚህ ይጀምራል -->
+
+
+
+
+ <!-- Second Photo Grid-->
+ <div class="w3-row-padding w3-padding-16 w3-center">
+  <div class="w3-quarter">
+
+
+    <img src=" https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiIqH5gyr18zCbUFh7BPLY4LVNWsAfSnN5yuANIqjlXOX6TDWDZ3aiojOfHS23nPoiJLdwrfF_6wN9k5ms0Ipl6eadInCnxJWKeDIWVdVfB3v2k5wBGGrZ4x4dNZ19Eeq9LFI0G2rwVx7z5SnFEEDXZ6nnAelFD1ZH0FHLrm6BrLh1jNnKVagOoMDZDoiw/s1515/31.png" alt="Salmon" style="width:100%">
+    
+    <p style= "text-align:left;" class="code" > How to Frame a Medium Shot Like a Master Cinematographer
+      RULES:  The Rule of Thirds <br>  </p>
+  </div>
+  <div class="w3-quarter">
+
+
+
+
+
+    <img src="  https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiTflww-IOI5-TGDU5B6tj0tvcR51aaghD-j7ghKRAw1HaxMcURGjlFhR6J4-zBOvGdThmJf2nRc2RzVioAuS7F4N-n0pHWYLIjkVjXewPzB8gD5e73Dw0GxEuQOfDT3naR7sP0l_j-mv5qLD5U9-J-bLAZhwoOnd3N6s3E3tkE7iGDGFhtgrMfqqUzd-A/s1475/47.png" alt="Sandwich" style="width:100%">
+
+
+
+
+    <img src="  https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEieiyZY1aHo-V_EQ9HpjJI_6TkI3_S_f10iRNqXmA4BXQTGSs38Kad-nlzPgJ9JJ7aHW2p9rbVO6qT0Z0CfVrNpSYnqK27fVzKy1K-DJpsSwPPemCZBITeqOVz3r__QtwewMl_eWZHYi4g58sxQ39PZnn6NkbJkxnSzUM5-78LedVydS2IM_Nj6BVqmU-4/s1382/32.png" alt="Sandwich" style="width:100%">
+
+
+
+
+    <img src=" https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjHXbwXW-Z5Q9_ciUWzj6IVs6fZ18FJr2-w2_ysYPV20xRMP37Y6QqK_iC_BNxwHz8-vByIAe9LUcICHrY_v2yVmHvEf1ze-UUp-h28fI3CHi3n1Iy-ju7GFlhb7VIKbEGB7zO9lzBW73uXVTtlugtuteLS6dI6Egr2qbOxC2Y4USJF2_CwihoWjxU2aWo/s1570/2.png" alt="Croissant" style="width:100%">
+
+
+
+
+    
+    
+    <H3 class="code"> RULES:  The Rule of Thirds  <br>   </H3>
+
+    <p style= "text-align:left;" class="code"> In video and photography, we draw imaginary lines, 2 vertical and 2 horizontal, roughly dividing the frame into 9 equal segments.     </p>
+  </div>
+  <div class="w3-quarter">
+
+
+
+
+    <img src="  https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjIjHXMuxiZKJ5NPmPI8GY8ms9q9FmyT46cPYNdx-7aNSyXWOihH1vvr2iUrly57QYW1_iGVSo3iUva4hMiHmN_OcJloCz7sKONQm__cxolnfRrr03iXgJaWmjnUAPLIQWEL-bqGgzH8u0tScL5VRArPlXNXgG7wBG9bnK2CaqwHhDwFbhmpYCGBubgb1g/s1465/33.png" alt="Croissant" style="width:100%">
+
+   
+    
+    <img src=" https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh-ODwtUAIlfp4IGdZlv1Bh24iy58-L9Za9XGEYCh42zWayMOIzB39ij402fF4sYuNnFabedUSMqBH7lqLqLVQXMKqYSdmiqXyasjdfiLZbkH811sHzj_m53rn4THw5kd1f9zZdTJsiADO9kJ7rt7sHiNCcwsYusDELNusKskkOXlMoYS26V3nIqJbiFWo/s1711/34.png" class="w3-round w3-image w3-opacity-min" alt="Table Setting" width="600" height="750">
+    
+    
+    
+    
+    
+    <H3 class="code">  Inclassical art   <br>  </H3>
+
+  
+    
+    <p style= "text-align:left;" class="code"> Composition this originated as the golden ratio based.
+
+
+      <p style= "text-align:left;"class="code" > The 180 degree rule is what helps us maintain our place in the scene.  Please click on the article above for some nice diagrams and video examples.
+     Simply described: Imagine drawing a line between 2 characters talking to each other (see dotted grey line).
+      All shots of that conversation should take place on one side of that "line" or the other (in Red side or the Green side. <br> </p>
+  </div>
+  <div class="w3-quarter">
+
+
+
+
+    
+    <p style= "text-align:left;" class="code" > The result has one character looking left to the right, and the other looking from right top the left. 
+      This helps us understand characters relationship in space to each other: <br>  </p>
+  </div>
+</div>
+
+
+
+
+<!-- 4 ሮው ያለው የሁለተኛው ዙር ሁለተኛው መስመር ከዚህ በላይ ያልቃል -->
+
+
+
+<!-- Page content part 1 start here -->
+
+
+  <!-- About Section -->
+  <div class="w3-row w3-padding-64" id="about">
+    <div class="w3-col m6 w3-padding-large w3-hide-small">
+
+     
+    </div>
+
+    <div class="w3-col m6 w3-padding-large">
+
+      <!-- <h1 class="w3-center">About Catering</h1><br>
+
+      <h5 class="w3-center">Tradition since 1889</h5> -->
+
+     <!--  <p class="w3-large">The Catering was founded in blabla by Mr. Smith in lorem ipsum dolor sit amet, consectetur
+         adipiscing elit consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+           Duis aute iruredolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla 
+           pariatur. We only use <span class="w3-tag w3-light-grey">seasonal</span> ingredients.</p> -->
+
+
+           <p style= "text-align:left;" class="code" > In a scene made up of these two shots, our built-in cinematic language tells us that these 2 characters are facing and interacting with each other.
+            Now, imagine the director crossed the "line" when shooting the Joker.  The result might look a bit like this: <br> </p>
+
+
+            <img src=" https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhQwgvD7IEWbT2JxciECtkfEZvlrqMhMHSyZUmngSZ7cKWKBYKpuD_8y4uv6uYDTdc7mBFa09pl4u6PYTtxGcsIyMQXE-UMr1GPW3iPrKaGTubFWxIXElI4lAgbd8Ao96zzDPh8NkHtQw2-LtawitbBE6ikrje__CLHNRtL_fxWzRIYb-2TrFrNzTYpfFg/s1697/35.png" 
+            class="w3-round w3-image w3-opacity-min" alt="Table Setting" width="600" height="750">
+    
+
+     <!--  <p class="w3-large w3-text-grey w3-hide-medium">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui 
+        officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod temporincididunt 
+        ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
+        laboris nisi ut aliquip ex ea commodo consequat.</p> -->
+    </div>
+  </div>
+  
+  <hr>
+  
+  <!-- Menu Section -->
+  <div class="w3-row w3-padding-64" id="menu">
+    <div class="w3-col l6 w3-padding-large">
+
+      <!-- <h1 class="w3-center">Our Menu</h1><br>
+
+      <h4>Bread Basket</h4> -->
+
+
+      <img src=" https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEilQ_TUPXdbClBb6Tkw9PruYY2vKOCeGNM1IqlfZhyirm9jq6WwXOHTu1GMK3CtbOReMA_M_M2rTt7Wsg2tqrXukd68PGHJN6XAHIpqswnaDULAYcwkF5PxzgvfjzHefqvOpnhMY1aBCGmOXO77tgys0Fhr5qPk_ssg5laU2vHBB44Nc_Bd4kn07aAmzYI/s1684/36.png" 
+      class="w3-round w3-image w3-opacity-min" alt="Menu" style="width:100%">
+
+      <p style= "text-align:left;" class="code" > This is disorienting and makes it appear as if there is a second Batman in the room.
+        Confused?  Watch these 2 videos that break down the 180-degree rule; <br> </p>
+      
+      
+    </div>
+    
+    
+    <div class="w3-col l6 w3-padding-large">
+
+      
+
+    
+    
+    </div>
+  </div>
+
+ 
+
+
+<!-- Page content part 1 end here -->
+
+
+<!-- Page content part 2 start here -->
+
+
+
+  <!-- About Section -->
+  <div class="w3-row w3-padding-64" id="about">
+    <div class="w3-col m6 w3-padding-large w3-hide-small">
+
+
+     <img src=" https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEidJkB1wHfRohqPGVtUf2DR1R39ySSlGLroVHp1kaWLCUAUo1T0i7WkAigL3UMTemS3SCZcFru24px9FnyOoHQeUZmJ8AUVHnc7PTWz2ANN5g4C3S-ykmQB27xpQkYvt4vQidQmrQEfsu26vKrDSC5Ho4F-RDIQH1tTVGZr4XN-ZtnBiR6qr5s48ZJq_3c/s1433/38.png" class="w3-round w3-image w3-opacity-min" alt="Table Setting" width="600" height="750">
+   
+   
+    </div>
+
+    <div class="w3-col m6 w3-padding-large">
+
+     
+
+
+           <li   li class="code" style= "text-align:left;" ul class="a" li>  Room (or Space) <br> </li>
+
+            <li   li class="code" style= "text-align:left;" ul class="a" li> There are 2 parts to this rule, vertical and horizontal space,
+               they have 2 specific names: <br> </li>
+
+            <li   li class="code" style= "text-align:left;" ul class="a" li> a. Look Room (or Look space) <br> </li>
+              <li   li class="code" style= "text-align:left;" ul class="a" li>  b. Head Room. <br> </li>
+                <li   li class="code" style= "text-align:left;" ul class="a" li>  3.a. Look Room: <br> </li>
+
+           <li   li class="code" style= "text-align:left;" ul class="a" li>  This part of the rule of thirds.  It involves giving 
+            your subject room for them to "look". 
+             Example: If your subject is looking to the left, they should be framed to the right,
+             so there is "room" in the frame to look. This: <br> </li>
+
+
+    </div>
+  </div>
+  
+  <hr>
+  
+  <!-- Menu Section -->
+  <div class="w3-row w3-padding-64" id="menu">
+    <div class="w3-col l6 w3-padding-large">
+
+      <!-- <h1 class="w3-center">Our Menu</h1><br>
+
+      <h4>Bread Basket</h4> -->
+
+      <p style= "text-align:left;" class="code" > Not this: <br>  </p>
+      
+      
+    </div>
+    
+    <div class="w3-col l6 w3-padding-large">
+      <img src=" https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh8tOTcyNSUZQG2Zayqmn7hvkqawFOBmKdvI3Q8UL7jsNDtIs7f4tJOdwJTPWm8GHhum3csy3Gf7SzGDOKXHut7nzHqpHDU6uAmcIHVdrG_aF_t7ZHzudifc9n4rl5qnBvkV-T92bqLybbUD_pD1KedtRp5lQSFe-vYpvbq2n30tTxo_sBDJAENiUzycvg/s989/39.png" class="w3-round w3-image w3-opacity-min" alt="Menu" style="width:100%">
+    </div>
+  </div>
+
+  <hr>
+
+
+<!-- Page content part 2 end here -->
+
+
+
+<!-- Page content part 3 start here -->
+
+
+  <!-- About Section -->
+  <div class="w3-row w3-padding-64" id="about">
+    <div class="w3-col m6 w3-padding-large w3-hide-small">
+     <img src=" https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEidsAE5g0rr0Yns5_0c_vWwzBF-pCpt4jiM2FEoEMsOgdNddmZrrvBU0T9KtyK2VAD0Oq_PXK60vN3yK57eR6QE_ot0afFlvwaksQ91NFHy463-fkczEKdqbbQx2FtMFpWqxOZ-ZHACQ-y5u18shxT7A97L-mxWzl1IRkkAX8GiXZDetzfWdWl1Z8jF3kw/s1227/40.png" 
+     class="w3-round w3-image w3-opacity-min" alt="Table Setting" width="600" height="750">
+    </div>
+
+    <div class="w3-col m6 w3-padding-large">
+
+
+      <p style= "text-align:left;" class="code" > Here is a specific diagram: <br>  </p>
+
+      <!-- <h1 class="w3-center">About Catering</h1><br>
+
+      <h5 class="w3-center">Tradition since 1889</h5> -->
+
+     <!--  <p class="w3-large">The Catering was founded in blabla by Mr. Smith in lorem ipsum dolor sit amet, consectetur
+         adipiscing elit consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+           Duis aute iruredolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla 
+           pariatur. We only use <span class="w3-tag w3-light-grey">seasonal</span> ingredients.</p> -->
+
+
+           <p style=  "text-align:left;" class="code">   Headroom: <br> </p>
+
+           <p style= "text-align:left;"class="code" >  Headroom as a rule here applies more to interviews, documentaries and corporate/commercial production.
+            It is leaving a small amount of space above the subject's head.  Just enough so the person's head is not cut-off.
+            Too much headroom looks awkward. Properly framed shot with just a bit of headroom should leave subject's eyes at 
+            one of the "rule-of-thirds" intersection points.  <br> </p>
+
+
+
+            <p style= "text-align:left;" class="code"> Lens <br> </p>
+
+              <li   li class="code" style= "text-align:left;" ul class="a" li>  Focus <br> </li>
+
+                <li   li class="code" style= "text-align:left;" ul class="a" li>  Zoom <br> </li>
+                <li   li class="code" style= "text-align:left;" ul class="a" li> Aperture <br> </li>
+
+                <p style= "text-align:left;" >  Exposure <br> </p>
+
+                <li   li class="code" style= "text-align:left;" ul class="a" li>  Aperture <br> </li>
+                  <li   li class="code" style= "text-align:left;" ul class="a" li>  Shutter Speed <br> </li>
+                    <li   li class="code" style= "text-align:left;" ul class="a" li>  ISO/Gain/Sensitivity <br> </li>
+                      <li   li class="code" style= "text-align:left;" ul class="a" li> ND Filter (Neutral Density) <br> </li>
+                        <li   li class="code" style= "text-align:left;" ul class="a" li>  Color Temperature /. White Ballance <br> </li>
+
+                        <p style= "text-align:left;" > Recording <br> </p>
+                        <li   li class="code" style= "text-align:left;" ul class="a" li> Media
+                          <li   li class="code" style= "text-align:left;" ul class="a" li>Resolution
+                            <li   li class="code" style= "text-align:left;" ul class="a" li>Compression
+
+                              <p style= "text-align:left;" > Audio <br> </p>
+
+            <li   li class="code" style= "text-align:left;" ul class="a" li> Input Select <br> </li>
+              <li   li class="code" style= "text-align:left;" ul class="a" li>Auto/Manual <br> </li>
+                <li   li class="code" style= "text-align:left;" ul class="a" li>Levels <br> </li>
+                  <li   li class="code" style= "text-align:left;" ul class="a" li>Mic Types <br> </li>
+
+                  <p style= "text-align:left;" > Settings <br> </p>
+
+            <li   li class="code" style= "text-align:left;" ul class="a" li> Menu Acces <br> </li>
+              <li   li class="code" style= "text-align:left;" ul class="a" li>Viewfinder Options <br> </li>
+                <li   li class="code" style= "text-align:left;" ul class="a" li> Manual Operations <br> </li>
+
+            <h3 style= "text-align:left;" > Preproduction   </h3> 
+
+      <p class="w3-large w3-text-grey w3-hide-medium" style= "text-align:left;" > Let's fist take a look at the 3 phases of Video production:
+        Preproduction, Production and Postproduction. <br> </p>
+
+        <p style= "text-align:left;" >  1. Preproduction <br> </p>
+
+        <li   li class="code" style= "text-align:left;" ul class="a" li> The events that take place prior to the actual shooting of the video. <br> </li>
+          <li   li class="code" style= "text-align:left;" ul class="a" li> Idea Generation <br> </li>
+            <li   li class="code" style= "text-align:left;" ul class="a" li> Brainstorming <br> </li>
+              <li   li class="code" style= "text-align:left;" ul class="a" li>Original Idea <br> </li>
+                <li   li class="code" style= "text-align:left;" ul class="a" li>Topic of interest <br> </li>
+                  <li   li class="code" style= "text-align:left;" ul class="a" li> Client's request <br> </li>
+                    <li   li class="code" style= "text-align:left;" ul class="a" li>Script Writing <br> </li>
+                      <li   li class="code" style= "text-align:left;" ul class="a" li> The written text for your movie. <br> </li>
+                        <li   li class="code" style= "text-align:left;" ul class="a" li> Can be detailed shot list if there is no dialog. <br> </li>
+                        <li   li class="code" style= "text-align:left;" ul class="a" li>  Storyboarding <br> </li>
+                        <li   li class="code" style= "text-align:left;" ul class="a" li>   A sequence of drawings, with directions and sometimes dialog, 
+                          that represents planned shots for a movie. <br> </li>
+    </div>
+  </div>
+  
+  <hr>
+  
+  <!-- Menu Section -->
+  <div class="w3-row w3-padding-64" id="menu">
+    <div class="w3-col l6 w3-padding-large">
+
+      <!-- <h1 class="w3-center">Our Menu</h1><br>
+
+      <h4>Bread Basket</h4> -->
+
+      <img src="  https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQngqgxuHIrGg_NHInKxHJ2WMLPnZXjW-r66epznlWusSc4Bu6w4NLqlUAsTBa7P-nUBhF7g8RwC-crewFGW4tyQEpQYXVpJHImTLQB7NHxnOmLBhhc5vrmwWTJT3P7w0yZ4ZqWaJZrgYWHEPBRN_W73XV4jnGOyDoW9mPy00Ai9Q0GRt8ycWI4ezZGnE/s1579/41.png" 
+     class="w3-round w3-image w3-opacity-min" alt="Table Setting" width="600" height="750">
+
+     <p style= "text-align:left;" >   Casting -finding appropriate people to play the roles of the video  <br> </p>
+
+      <li   li class="code" style= "text-align:left;" ul class="a" li>   Scouting Locations <br> </li>
+        <li   li class="code" style= "text-align:left;" ul class="a" li> Look and feel <br> </li>
+          <li   li class="code" style= "text-align:left;" ul class="a" li> Associated cost <br> </li>
+            <li   li class="code" style= "text-align:left;" ul class="a" li> Lighting <br> </li>
+              <li   li class="code" style= "text-align:left;" ul class="a" li> Permission <br> </li>
+                <li   li class="code" style= "text-align:left;" ul class="a" li> Logistics <br> </li>
+                  <li   li class="code" style= "text-align:left;" ul class="a" li> Power <br> </li>
+                    <li   li class="code" style= "text-align:left;" ul class="a" li> Distance <br> </li>
+                      <li   li class="code" style= "text-align:left;" ul class="a" li> Parking <br> </li>
+
+                        <p style= "text-align:left;" > 2. Production  <br> </p>
+
+                        <p style= "text-align:left;" >The actual shooting/recording of the video.   <br> </p>
+      
+      
+    </div>
+    
+    <div class="w3-col l6 w3-padding-large">
+
+      <img src=" https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgZTdkHb0rnvS1zIC-ne1iSWOiUbsO2DvxKLD8z8ZfJy47brk9R9wbHO9A_mpFCkFJCvaNMkzv3VBQNzrhNwllRg6FuJ5yGKX32ljMF6aKRRA1PdjQGtX-qqqcUAbbixBPMhgN6NeAfXZ-pVBEIHLvczqHshS2cSGFxb-rIp5pxKjMA_9C9Jm8BCVPqPz0/s1169/42.png" class="w3-round w3-image w3-opacity-min" alt="Menu" style="width:100%">
+    </div>
+  </div>
+
+  <hr>
+
+
+<!-- Page content part 3 end here -->
+
+<!-- Promo Section 1 Start here  -->
+
+
+
+  
+  
+  <div class="w3-row-padding">
+  
+    <div class="w3-col m6">
+
+     <!--  <h3 class="code" >JOIN OTHER PROGRAMS <br> </h3> -->
+
+       
+   
+     <li   li class="code" style= "text-align:left;" ul class="a" li> Framing Shots/Field of View <br> </li>
+      <li   li class="code" style= "text-align:left;" ul class="a" li> Shot Types: Wide, Medium, Tight <br> </li>
+        <li   li class="code" style= "text-align:left;" ul class="a" li> Camera movement <br> </li>
+          <li   li class="code" style= "text-align:left;" ul class="a" li> Pan Tilt Zoom Dolly, etc. <br> </li>
+            <li   li class="code" style= "text-align:left;" ul class="a" li> Audio <br> </li>
+              <li   li class="code" style= "text-align:left;" ul class="a" li> Microphone Choice: On Board, Shotgun Mic, Boom Mic <br> </li>
+                <li   li class="code" style= "text-align:left;" ul class="a" li> Lighting <br> </li>
+                  <li   li class="code" style= "text-align:left;" ul class="a" li> Natural vs. Artificial <br> </li>
+
+                  <p style= "text-align:left;" > 2. Postproduction <br> </p>
+
+        <li   li class="code" style= "text-align:left;" ul class="a" li>  All events between production and creating the final version of the video. <br> </li>
+        <li   li class="code" style= "text-align:left;" ul class="a" li>  Capturing Video -importing video from the original recording device. <br> </li>
+        <li   li class="code" style= "text-align:left;" ul class="a" li>  Trimming Clips and Creating Sequences <br> </li>
+
+     <!--  <p><a href="#work" class="w3-button w3-black"><i class="fa fa-th"> </i> View Our Works</a></p> -->
+
+
+
+    </div>
+    <div class="w3-col m6">
+      <img class="w3-image w3-round-large" src=" https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiU-Mtp_RjzMQD0SwHTbcflGqgz_QSEIZDbN2oEk0edhgdJqaTwByrYNG_-cXhyTxXmRlOXgL_O75mIxhTRyI9grlkelL9j07SAQdyd3-AQLkm3UH3eeCfTfQuIQoEbLJmpMQ92snDAi9nCfP8zGfYzS04rd8aAa0LjG-mX41VKPjz9VhYbjsHjofpt7Hk/s1561/43.png" alt="Buildings" width="350" height="197">
+    </div>
+  </div>
+</div>
+
+<!-- Promo Section 1 END here  -->
+
+
+<!-- Promo Section 2 Start here  -->
+
+
+<div class="w3-container w3-light-white" style="padding:128px 16px">
+  <div class="w3-row-padding">
+    <div class="w3-col m6">
+
+     <!--  <h3 class="code" >CONTRIBUTE TO TBF <br> </h3> -->
+
+         
+     <li   li class="code" style= "text-align:left;" ul class="a" li>  Clips: Small segments of a larger video. <br> </li>
+        
+     <li   li class="code" style= "text-align:left;" ul class="a" li>   Trim: To hide parts of a file or clip without deleting them from the original source. <br> </li>
+        
+     <li   li class="code" style= "text-align:left;" ul class="a" li> Sequence: A variety of wide, medium, and tight video shots edited together to compress time, 
+      add interest, and help the viewer movie efficiently through a story. <br> </li>
+        
+     <li   li class="code" style= "text-align:left;" ul class="a" li> Timeline: Shows the components of the movie such as photos, video, <br> </li>
+      audio clips and titles in the order and timing that they will appear in movie. <br> </li>
+
+      <p style= "text-align:left;" > Adding Titles and Graphics <br> </p>
+        
+     <li   li class="code" style= "text-align:left;" ul class="a" li>  Rolling credits-Include cast and credits for sources.<br> </li>
+
+     <p style= "text-align:left;" > Adding/Editing Sound <br> </p>
+        
+     <li   li class="code" style= "text-align:left;" ul class="a" li>  Soundtracks or sound effects: Additional audio added as background 
+      or to enhance specific points in the video.<br> </li>
+        
+     <li   li class="code" style= "text-align:left;" ul class="a" li>  Narration (Voice-over): Audio of one or more people that has been 
+      recorded to enhance or assist in telling the story for your video.<br> </li>
+
+      <p style= "text-align:left;" >	Apply Effects <br> </p>
+        
+     <li   li class="code" style= "text-align:left;" ul class="a" li>   Transitions: The visual movements as one picture, video clip, or title changes to another.<br> </li>
+        
+     <li   li class="code" style= "text-align:left;" ul class="a" li>  Transitions are not applied directly to the clips, but are used to move 
+      from one to another. (Common: Cross Dissolve)<br> </li>
+        
+     <li   li class="code" style= "text-align:left;" ul class="a" li>  Video Effects: Enable you to add special effects to your movie. 
+      An example would be adding a Film Age video effect to make your movie clip to look like that of an old time movie or making the video black and white.<br> </li>
+
+      <p style= "text-align:left;" >	Exporting <br> </p>
+        
+     <li   li class="code" style= "text-align:left;" ul class="a" li>  Making your edited project a stand-alone, playable video file <br> </li>
+
+
+        
+     <li   li class="code" style= "text-align:left;" ul class="a" li>   .mp4 <br> </li>
+          
+     <li   li class="code" style= "text-align:left;" ul class="a" li>  .mov <br> </li>
+          
+     <li   li class="code" style= "text-align:left;" ul class="a" li>  .avi   <br> </li>
+
+          <img class="w3-image w3-round-large" src=" https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjMHjFwUjYQRuwg8ry2u35tonazUULVr8HTG6QAEub2KQsMHG18S0Ey60b1BK6vKKFo8R5SVSAIwn6oyRByJEqPcvcmbfwr8msKA4BMtfDBOj9h8Gm7Mr5xyBbTzCRYvb-0eHO0RhBCI4nVdXSAC2FmUojYtAFntbkLIG1TQyhzMm_ucTAlPG5mfuCbCSk/s1555/44.png" 
+      alt="Buildings" width="350" height="197">
+
+    <!--  <p> <a href="#work" class="w3-button w3-black"><i class="fa fa-th"> </i> View Our Works</a></p> -->
+
+
+    </div>
+
+    <div class="w3-col m6">
+      <img class="w3-image w3-round-large" src=" https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh2iP-ZAb1dDMvgxAyQlbPJDLwILerxGBnivRbJN9FXrmxu_JhU6I3I2Xqui0MVkLzX9NYJtvCYdLFuq9-TFxHwSMcB6n1IGF0tBC48P8M1EijXpmqmtmaaoo-OaAnNaMAN8r-eplrcY7_OxWdNu-yl-Ip0dA86tRF2kHyJu2dXMPZpQ-a_snT-RaErJZU/s1642/45.png" 
+      alt="Buildings" width="350" height="197">
+
+      <p style= "text-align:left;" >    Shot list  <br> </p>
+
+      <img class="w3-image w3-round-large" src=" https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhs0UaWKMjiDhx28_3SPMMLR_-he4eKpn2y2FAuulGxpIvaEXiY8YRkmsGuZMeeTS4S2uYEWJQDySX6s59EOlQHeqhIK5fqVpQuAEoWPESjqYqvQJu4TqmpMqbTQlTz6IjGWMaNOybtjp_kEiiBqclVTn7QbG9zUZS0wxjgSl6KgHJ5HiZ9afxf87FAR5o/s761/46.png" 
+      alt="Buildings" width="350" height="197">
+
+
+      <p style= "text-align:left;" >   Here is a link for a printable story board template for you to use.  It is 2 pages, 
+        so you can print double sided to save paper if that's an option. <br> </p>
+
+
+    </div>
+  </div>
+</div>
+
+<!-- Promo Section 2 END here  -->
+
+
+
+
+
+  
+   <!--  <h2 style="text-align:center"> Have Questions?</h2>
+  
+   <p style="text-align:center;" class="code"  > Feel free to message us! we are here to discuss your ideas and bring them to life.
+
+    Feel free to adjust the description based on your specific style and approach to design.  <br> </p> -->
+
+    
+
+    <!-- Contact Section -->
+
+
+
+    <div class=" w3-padding-16 ">
+
+      <!--   w3-padding-64  -->
+
+
+<div class="  w3-light-grey  " >
+
+
+<!--  w3-container -->
+ 
+
+<h3 style="text-align: center"> The End </h3>
+
+<!-- 
+
+<p style="text-align: center">Lets get in touch. Send us a message to Palo Alto, CA:</p> 
+<div style="margin-top:10px">
+
+-->
+ <!--  <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone: +1(201) 374-0818</p>
+    <p> <i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right" > </i> Email: BSL@bitews.com</p> -->
+
+  <!--  <p> <i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone: <a href=" # " target="_blank" class="w3-hover-text-green" > +1(201) 374-0818</a></p> -->
+
+  <!--   <p> <i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"></i> Email: <a href=" # " target="_blank" class="w3-hover-text-green" > BSL@bitews.com</a></p> -->
+    
+    <div class="w3-center w3-padding-16  "> 
+  
+
+ <!--  <p><a href=" https://forms.gle/MKPz9uc1tg59f51s5" class="w3-button w3-black"><i class="fa fa-envelope"> </i> SEND MESSAGE</a></p> -->
+
+  
+  <div class=" w3-padding-16  "> 
+ 
+
+
+
+ <!--footer start here-->
+
+
+ 
+
+  <footer class="w3-padding-32 w3-theme-d1 w3-center">
+  
+    <a href="#myHeader" class="w3-button w3-blue"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+
+
+    <!-- 
+  <h4>Follow Us</h4>
+
+  
+  
+  <a class="w3-button w3-large w3-teal" href=" https://www.facebook.com/profile.php?id=100086062394930" title="Facebook"><i class="fa fa-facebook"></i></a>
+  <a class="w3-button w3-large w3-teal" href=" https://twitter.com/Bitewstudio" title="Twitter"><i class="fa fa-twitter"></i></a>
+  
+  <a class="w3-button w3-large w3-teal" href=" https://www.instagram.com/bitewstudio/" title="instagram"><i class="fa fa-instagram"></i></a>
+  <a class="w3-button w3-large w3-teal w3-hide-small" href=" https://www.linkedin.com/company/bitew-studio-lab/?viewAsMember=true" title="Linkedin"><i class="fa fa-linkedin"></i></a>
+
+
+
+    
+  <a class="w3-button w3-large w3-teal w3-hide-small" href="#" title="Pinterest"><i class="fa fa-pinterest"></i></a>
+
+
+  <p class="code" >IMPORTANT: <br> </p>
+
+    <p class="code"> We don't provide a copyright or trademark logo and we don't take responsibility for copyright or trademark-related issues.  <br> </p>
+
+      <p class="code">  We cannot accept work involving adult content, gambling, alcohol and pornography.  <br> </p>
+  
+
+    <p> Remember to check out our  <a href=" https://www.bitews.com/ " target="_blank" class="w3-hover-text-green"> Bitews.com</a></p>
+
+
+
+    <a href=" https://www.bitews.com/policy/terms-of-service" target="_blank" class="w3-hover-text-green"> Terms & Conditions |</a>
+
+
+    <a href=" https://www.bitews.com/policy/privacy-policy" target="_blank" class="w3-hover-text-green">Privacy Policy  |</a>
+    
+    <a href=" https://www.bitews.com/policy/cookie-policy" target="_blank" class="w3-hover-text-green">Cookie Policy  |</a>
+    
+    <a href=" https://www.bitews.com/policy/acceptable-use-policy" target="_blank" class="w3-hover-text-green"> Acceptable Use Policy  |</a>
+
+    <a href=" https://www.bitews.com/policy/rp " target="_blank" class="w3-hover-text-green "> Refund Policy  |</a>
+
+
+
+
+    <a href=" https://www.bitews.com/policy/rp " target="_blank" class="w3-hover-text-green"> Refund Policy  |</a>
+
+    <a href=" https://www.bitews.com/disclaimer " target="_blank" class="w3-hover-text-green "> Disclaimer </a> 
+
+    <p style="text-align:center;"> © Copyright 2024,  Bitew Studio Lab (BSL) and logo.  All right reserved.</p>
+
+   
+
+
+
+
+ <footer class="w3-container w3-theme-dark w3-padding-16">
+  
+ 
+
+  <div style="position:relative;bottom:55px;" class="w3-tooltip w3-right">
+
+    <span class="w3-text w3-theme-light w3-padding">Go To Top</span>   
+
+    <a class="w3-text-white" href="#myHeader"><span class="w3-xlarge">
+
+    <i class="fa fa-chevron-circle-up"></i></span></a>
+  </div>
+  
+  <div class="w3-right"> 
+    <p>Powered by <a href=" https://www.bitews.com/" title="BSL.LOGO" target="_blank"
+      class="w3-hover-text-green">BSL</a></p>
+
+    -->
+
+</footer> 
+
+
+
+
+<!-- Script for Sidebar, Tabs, Accordions, Progress bars and slideshows -->
+<script>
+// Side navigation
+function w3_open() {
+  var x = document.getElementById("mySidebar");
+  x.style.width = "100%";
+  x.style.fontSize = "40px";
+  x.style.paddingTop = "10%";
+  x.style.display = "block";
+}
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+
+// Tabs
+function openCity(evt, cityName) {
+  var i;
+  var x = document.getElementsByClassName("city");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  var activebtn = document.getElementsByClassName("testbtn");
+  for (i = 0; i < x.length; i++) {
+    activebtn[i].className = activebtn[i].className.replace(" w3-dark-grey", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " w3-dark-grey";
+}
+
+var mybtn = document.getElementsByClassName("testbtn")[0];
+mybtn.click();
+
+// Accordions
+function myAccFunc(id) {
+  var x = document.getElementById(id);
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+
+// Slideshows
+var slideIndex = 1;
+
+function plusDivs(n) {
+  slideIndex = slideIndex + n;
+  showDivs(slideIndex);
+}
+
+function showDivs(n) {
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length} ;
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+
+showDivs(1);
+
+// Progress Bars
+function move() {
+  var elem = document.getElementById("myBar");   
+  var width = 5;
+  var id = setInterval(frame, 10);
+  function frame() {
+    if (width == 100) {
+      clearInterval(id);
+    } else {
+      width++; 
+      elem.style.width = width + '%'; 
+      elem.innerHTML = width * 1  + '%';
+    }
+  }
+}
+</script>
+
+
+
+
+ <!-- ይህ ከዚህ በታች የሚጀምረው ኮድ በጣም አስፈላጊ ኮድ ነው። የኪቦርድ ኪ ወይም ማውሳችንን በቀኝ ክሊክ ሲደረፍ ለሚከፈተው
+     እና የሚታዬውን ወይም ኮፒ ፔስት የሚደረገውን ኮድ ወይም ቴክስቱን ኮፒ እንዳይሆን መከላከያ ኮድ ነው። እቦዲውጋ ካለው ትንሽዬ ኮድን ጨምሮ -->
+
+     <script>
+
+
+      document.onkeydown = function(e){
+      
+          //console.log(e.keyCode); // u = 85, i = 73, j =74
+          if (e.ctrlkey && e.keyCode == 85){
+      
+              alert("Ctrl + u has been disabled");
+      
+              return false;
+          }
+      
+          if (e.ctrlKey && e.shiftKey && e.keyCode == 73) {
+      
+              alert("Ctrl + shift + I has been disabled");
+      
+              return false;
+          }
+      
+      
+          if (e.ctrlKey && e.shiftKey && e.keyCode == 74) {
+      
+              alert("Ctrl + shift + J has been disabled");
+      
+            return false;
+      }
+          if (e.keyCode == 123) { // F12 button
+      
+              alert("F12 has been disabled");
+      
+              return false;
+          }
+      
+      
+      }
+      
+              
+</script>
+      
+<!-- ይህ ከዚህ በላይ ያለው ኮድ በጣም አስፈላጊ ኮድ ነው። የኪቦርድ ኪ ወይም ማውሳችንን በቀኝ ክሊክ ሲደረፍ ለሚከፈተው
+   እና የሚታዬውን ወይም ኮፒ ፔስት የሚደረገውን ኮድ ወይም ቴክስቱን ኮፒ እንዳይሆን መከላከያ ኮድ ነው። እቦዲውጋ ካለው ትንሽዬ ኮድን ጨምሮ -->
+
+
+
+
+</body>
+</html>
+
+
+
+
+
