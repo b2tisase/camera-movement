@@ -134,6 +134,7 @@
       padding: 36px 32px;
       margin-bottom: 36px;
       box-shadow: 0 2px 10px rgba(15, 23, 42, 0.03);
+      overflow: hidden; /* Prevents large content from bleeding outside the white card */
     }
     .section-header {
       font-size: 1.85rem;
@@ -222,7 +223,7 @@
       opacity: 0.92;
     }
 
-    /* Badge & Metadata Elements */
+    /* Badges */
     .badge {
       display: inline-flex;
       align-items: center;
@@ -251,19 +252,22 @@
       border: 1px solid #a7f3d0;
     }
 
-    /* Standard Diagram Image Layout */
+    /* Standard Diagram Image Layout - FIXES THE SPILL/OVERFLOW */
     .diagram-wrap {
       text-align: center;
       margin: 22px 0;
+      width: 100%;
+      overflow: hidden;
     }
     .diagram-wrap img {
-      max-width: 680px;
-      width: 100%;
+      max-width: 100% !important; /* Forces image to stay inside its card container */
       height: auto;
       border-radius: 8px;
       border: 1px solid var(--card-border);
       cursor: zoom-in;
       transition: transform 0.2s ease, box-shadow 0.2s ease;
+      display: block;
+      margin: 0 auto;
     }
     .diagram-wrap img:hover {
       transform: scale(1.01);
@@ -315,11 +319,20 @@
       font-weight: 500;
     }
 
+    /* MODAL OVERLAY RULES - Fixes popups being covered or pushed */
+    .w3-modal {
+      z-index: 9999 !important; /* Always sits in front of the sticky header */
+      padding-top: 20px !important;
+      overflow-y: auto !important;
+      background-color: rgba(15, 23, 42, 0.75) !important;
+      backdrop-filter: blur(4px);
+    }
+
     /* Lightbox Modal */
     #imageModal {
       display: none;
       position: fixed;
-      z-index: 2000;
+      z-index: 10000;
       padding-top: 40px;
       left: 0;
       top: 0;
@@ -378,7 +391,68 @@
       gap: 16px;
       margin: 20px 0;
     }
+
+    /* MOBILE OVERRIDES (Screens <= 600px) */
+    @media (max-width: 600px) {
+      .top-nav {
+        padding: 4px 0 !important;
+      }
+      .top-nav .nav-container {
+        padding: 4px 10px !important;
+        flex-direction: column;
+        align-items: stretch;
+      }
+      .top-nav .nav-links {
+        display: flex !important;
+        overflow-x: auto !important;
+        white-space: nowrap !important;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        padding-bottom: 2px;
+      }
+      .top-nav .nav-links::-webkit-scrollbar {
+        display: none;
+      }
+      .top-nav .nav-links a {
+        font-size: 0.78rem !important;
+        padding: 6px 10px !important;
+      }
+
+      /* Modal card sizing on mobile devices */
+      .w3-modal-content {
+        margin: 40px auto 20px !important;
+        width: 92% !important;
+        max-width: 95% !important;
+        border-radius: 10px;
+        overflow: hidden;
+      }
+      .w3-modal-content header {
+        padding: 12px 16px !important;
+      }
+      .w3-modal-content h4 {
+        font-size: 1.1rem !important;
+        margin: 0 !important;
+      }
+      .w3-modal-content h5 {
+        font-size: 0.88rem !important;
+        margin: 4px 0 0 !important;
+      }
+      .w3-modal-content .w3-padding {
+        padding: 16px !important;
+      }
+
+      .main-wrapper {
+        padding: 20px 12px 60px;
+      }
+      .edu-section {
+        padding: 24px 16px;
+      }
+      .hero-banner-container h1 {
+        font-size: 2.1rem;
+      }
+    }
   </style>
+  
 </head>
 <body>
 
